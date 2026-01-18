@@ -30,25 +30,23 @@ st.markdown("""
         margin-top: 0;
     }
     
-    . sub-header {
+    .sub-header {
         font-size: 0.95rem;
         color: #6B7280;
         margin-bottom: 0.5rem;
     }
     
-    /* Reduce top padding of main content area */
     .block-container {
         padding-top: 1. 5rem ! important;
     }
     
     /* ===== SIDEBAR STYLES ===== */
-    /* Tighter spacing for sidebar elements */
-    [data-testid="stSidebar"] . stTextInput {
+    [data-testid="stSidebar"] .stTextInput {
         margin-bottom: 0.5rem;
     }
     
     [data-testid="stSidebar"] .stMarkdown hr {
-        margin:  0.75rem 0;
+        margin: 0.75rem 0;
     }
     
     [data-testid="stSidebar"] h2 {
@@ -56,30 +54,29 @@ st.markdown("""
     }
     
     /* ===== BUTTON STYLES ===== */
-    /* Primary button - teal/cyan accent color */
     .stButton > button[kind="primary"] {
         background-color: #0D9488;
         border-color: #0D9488;
         color: white;
     }
     
-    . stButton > button[kind="primary"]:hover {
+    .stButton > button[kind="primary"]:hover {
         background-color: #0F766E;
         border-color:  #0F766E;
         color: white;
     }
     
-    . stButton > button[kind="primary"]:focus {
+    .stButton > button[kind="primary"]:focus {
         box-shadow: 0 0 0 0.2rem rgba(13, 148, 136, 0.4);
     }
     
-    . stButton > button[kind="primary"]:active {
+    .stButton > button[kind="primary"]:active {
         background-color: #115E59;
         border-color: #115E59;
     }
     
     /* ===== MAP PLACEHOLDER STYLES ===== */
-    . map-placeholder {
+    .map-placeholder {
         width: 100%;
         height: 400px;
         background-color: #E5E7EB;
@@ -110,7 +107,7 @@ st.markdown("""
 # =============================================================================
 # HEADER SECTION
 # =============================================================================
-st. markdown('<p class="main-header">Vienna Route Metrics</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-header">Vienna Route Metrics</p>', unsafe_allow_html=True)
 st.markdown(
     '<p class="sub-header">Vergleichen Sie verschiedene Verkehrsmittel für Ihre Route in Wien:  '
     'Reisezeit, Distanz, CO₂-Emissionen und Kosten auf einen Blick.</p>',
@@ -121,7 +118,7 @@ st.markdown(
 # SIDEBAR - INPUT SECTION
 # =============================================================================
 with st.sidebar:
-    st. header("🗺️ Route eingeben")
+    st.header("Route eingeben")
     st.markdown("---")
 
     start_address = st.text_input(
@@ -193,7 +190,7 @@ if compare_button:
             with map_placeholder.container():
                 st.info("**Kartenansicht (Platzhalter)**")
                 st.markdown(
-                    '<div class="map-placeholder">📍 Karte wird hier angezeigt</div>',
+                    '<div class="map-placeholder">Karte wird hier angezeigt</div>',
                     unsafe_allow_html=True
                 )
 else:
