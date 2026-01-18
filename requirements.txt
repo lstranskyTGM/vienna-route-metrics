@@ -1,0 +1,22 @@
+# Vienna Route Metrics - Python Dependencies
+
+# Web Framework
+streamlit>=1.30.0
+
+# Interactive Maps
+streamlit-folium>=0.15.0
+folium>=0.14.0
+
+# HTTP Requests (for Google Maps API)
+requests>=2.31.0
+
+# Environment Variable Management
+python-dotenv>=1.0.0
+
+# Data Processing
+pandas>=2.0.0
+
+# Optional: For development and testing
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.1.0
