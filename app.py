@@ -21,60 +21,37 @@ st.set_page_config(
 # =============================================================================
 st.markdown("""
     <style>
-    /* ===== HEADER STYLES ===== */
-    .main-header {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #1E3A8A;
-        margin-bottom: 0.2rem;
-        margin-top: 0;
-    }
-    
-    .sub-header {
-        font-size: 0.95rem;
-        color: #6B7280;
-        margin-bottom: 0.5rem;
-    }
-    
-    .block-container {
-        padding-top: 1. 5rem ! important;
-    }
-    
     /* ===== SIDEBAR STYLES ===== */
-    [data-testid="stSidebar"] .stTextInput {
-        margin-bottom: 0.5rem;
-    }
-    
     [data-testid="stSidebar"] .stMarkdown hr {
         margin: 0.75rem 0;
     }
     
-    [data-testid="stSidebar"] h2 {
-        margin-bottom: 0.5rem;
+    [data-testid="stSidebar"] > div:first-child {
+        padding-top: 1.75rem;
     }
-    
+
     /* ===== BUTTON STYLES ===== */
     .stButton > button[kind="primary"] {
         background-color: #0D9488;
         border-color: #0D9488;
         color: white;
     }
-    
+
     .stButton > button[kind="primary"]:hover {
         background-color: #0F766E;
-        border-color:  #0F766E;
+        border-color: #0F766E;
         color: white;
     }
-    
+
     .stButton > button[kind="primary"]:focus {
         box-shadow: 0 0 0 0.2rem rgba(13, 148, 136, 0.4);
     }
-    
+
     .stButton > button[kind="primary"]:active {
         background-color: #115E59;
         border-color: #115E59;
     }
-    
+
     /* ===== MAP PLACEHOLDER STYLES ===== */
     .map-placeholder {
         width: 100%;
@@ -86,16 +63,16 @@ st.markdown("""
         align-items: center;
         justify-content: center;
         color: #6B7280;
-        font-size:  1.1rem;
+        font-size: 1.1rem;
     }
-    
+
     /* ===== FOOTER STYLES ===== */
     .footer {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: #F3F4F6;
+        background-color: #1A1F2C;
         padding: 10px;
         text-align: center;
         font-size: 0.8rem;
@@ -103,16 +80,6 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-
-# =============================================================================
-# HEADER SECTION
-# =============================================================================
-st.markdown('<p class="main-header">Vienna Route Metrics</p>', unsafe_allow_html=True)
-st.markdown(
-    '<p class="sub-header">Vergleichen Sie verschiedene Verkehrsmittel für Ihre Route in Wien:  '
-    'Reisezeit, Distanz, CO₂-Emissionen und Kosten auf einen Blick.</p>',
-    unsafe_allow_html=True
-)
 
 # =============================================================================
 # SIDEBAR - INPUT SECTION
@@ -124,13 +91,11 @@ with st.sidebar:
     start_address = st.text_input(
         label="Startadresse",
         placeholder="z.B. Stephansplatz, Wien",
-        help="Geben Sie Ihre Startadresse ein"
     )
 
     destination_address = st.text_input(
         label="Zieladresse",
         placeholder="z.B. TU Wien Hauptgebäude",
-        help="Geben Sie Ihre Zieladresse ein"
     )
 
     st.markdown("---")
@@ -209,7 +174,7 @@ else:
 # =============================================================================
 # FOOTER
 # =============================================================================
-st. markdown(
+st.markdown(
     '<div class="footer"><strong>TU Wien</strong> | Denkweisen der Informatik</div>',
     unsafe_allow_html=True
 )
